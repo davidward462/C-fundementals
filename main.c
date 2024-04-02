@@ -10,9 +10,11 @@
  * Block curly brace goes on the same line, except for funtions.
  */
 
-int random_int(int range, int min)
+// Output a random integer x in the range min <= x <= max.
+int rand_interval(int min, int max)
 {
-        int value = rand() % range + min;
+        max++;
+        int value = rand() % max + min;
         return value;
 }
 
@@ -20,6 +22,12 @@ int main()
 {
         // seed random function
         srand(time(NULL));
+
+        // for testing
+        for (int i = 0; i < 15; i++) {
+                int value = rand_interval(0, 1);
+                printf("%d\n", value);
+        }
 
         return 0;
 }
