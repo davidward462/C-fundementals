@@ -22,8 +22,9 @@ int abs(int value)
 // Output a random integer x in the range min <= x <= max.
 int rand_interval(int min, int max)
 {
+        int range = abs(max - min);
         max++;
-        int value = rand() % max + min;
+        int value = rand() % range + min;
         return value;
 }
 
