@@ -39,10 +39,8 @@ int main()
         // seed random function
         srand(time(NULL));
 
-        // for testing
-        test_rand_interval(20, -10, 10);
-
-        foo();
+        // check testing file
+        init();
 
         return 0;
 }
