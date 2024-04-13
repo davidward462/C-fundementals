@@ -1,6 +1,8 @@
 #include <stdio.h>
 
 #include "testing.h"
+
+// Include all files that need to be tested.
 #include "random.h"
 
 void testing()
