@@ -48,7 +48,7 @@ void test_abs()
 void test_rand_interval(int count, int min, int max)
 {
         printf("Displaying %d calls of rand_interval(%d, %d)\n", count, min, max);
-        
+
         for (int i = 0; i < count; i++) {
                 int value = rand_interval(min, max);
                 printf("%d\n", value);
