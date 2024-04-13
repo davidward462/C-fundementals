@@ -2,7 +2,7 @@
 
 #include "testing.h"
 
-void init()
+void testing()
 {
         printf("Testing files OK.\n");
 }

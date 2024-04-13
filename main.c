@@ -5,6 +5,7 @@
 #include <math.h>
 
 #include "testing.h"
+#include "random.h"
 
 /*
  * Coding Style:
@@ -40,7 +41,9 @@ int main()
         srand(time(NULL));
 
         // check testing file
-        init();
+        testing();
+
+        rando();
 
         return 0;
 }
