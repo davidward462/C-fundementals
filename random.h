@@ -1,6 +1,8 @@
 #ifndef RANDOM_H
 #define RANDOM_H
 
-void rando();
+void seed();
+
+int rand_interval(int min, int max);
 
 #endif

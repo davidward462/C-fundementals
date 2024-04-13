@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 #include <stdbool.h>
 #include <math.h>
 
@@ -15,35 +13,15 @@
  * Block curly brace goes on the same line, except for funtions.
  */
 
-
-// Output a random integer x in the range min <= x <= max.
-int rand_interval(int min, int max)
-{
-        int range = abs(max - min);
-        max++;
-        int value = rand() % range + min;
-        return value;
-}
-
-void test_rand_interval(int count, int min, int max)
-{
-        printf("Displaying %d calls of rand_interval(%d, %d)\n", count, min, max);
-
-        for (int i = 0; i < count; i++) {
-                int value = rand_interval(min, max);
-                printf("%d\n", value);
-        }
-}
-
 int main()
 {
-        // seed random function
-        srand(time(NULL));
+        // initialize random generation
+        seed();
 
         // check testing file
         testing();
 
-        rando();
+        run_tests();
 
         return 0;
 }
