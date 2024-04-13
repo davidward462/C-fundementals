@@ -13,13 +13,6 @@
  * Block curly brace goes on the same line, except for funtions.
  */
 
-int abs(int value)
-{
-        if (value < 0) {
-                value = value * -1;
-        }
-        return value;
-}
 
 // Output a random integer x in the range min <= x <= max.
 int rand_interval(int min, int max)
@@ -30,22 +23,6 @@ int rand_interval(int min, int max)
         return value;
 }
 
-// Unit tests
-// TODO: maybe move these to another file at some point.
-
-void test_abs()
-{
-        bool pass = false;
-        int expected = 5;
-        int actual = abs(-5);
-
-        if (actual == expected) {
-                printf("TEST PASSED.\n");
-        }
-        else {
-                printf("TEST FAILED.\n");
-        }
-}
 
 void test_rand_interval(int count, int min, int max)
 {
@@ -64,7 +41,6 @@ int main()
 
         // for testing
         test_rand_interval(20, -10, 10);
-        test_abs();
 
         foo();
 
