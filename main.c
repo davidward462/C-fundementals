@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdbool.h>
+#include <math.h>
 
 #include "testing.h"
 
@@ -22,7 +23,6 @@ int rand_interval(int min, int max)
         int value = rand() % range + min;
         return value;
 }
-
 
 void test_rand_interval(int count, int min, int max)
 {
