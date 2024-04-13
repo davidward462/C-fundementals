@@ -3,6 +3,8 @@
 #include <time.h>
 #include <stdbool.h>
 
+#include "testing.h"
+
 /*
  * Coding Style:
  * Inspired by K&R and linux kernel standards.
@@ -63,6 +65,8 @@ int main()
         // for testing
         test_rand_interval(20, -10, 10);
         test_abs();
+
+        foo();
 
         return 0;
 }

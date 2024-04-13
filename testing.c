@@ -1,6 +1,8 @@
+#include <stdio.h>
+
 #include "testing.h"
 
-int foo()
+void foo()
 {
-        return 0;
+        printf("foo\n");
 }
