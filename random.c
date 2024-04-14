@@ -30,3 +30,13 @@ float random_float(float a)
         float x = (float)( (double)rand() / (double)(RAND_MAX/a) );
         return x;
 }
+
+/**
+ * TODO: Add this later
+ *
+ *float float_rand( float min, float max )
+{
+    float scale = rand() / (float) RAND_MAX;  //[0, 1.0]
+    return min + scale * ( max - min );       //[min, max]
+}
+**/
