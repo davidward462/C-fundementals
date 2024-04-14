@@ -24,3 +24,9 @@ int rand_interval(int min, int max)
         int value = rand() % range + min;
         return value;
 }
+
+float random_float(float a)
+{
+        float x = (float)( (double)rand() / (double)(RAND_MAX/a) );
+        return x;
+}
