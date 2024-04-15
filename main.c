@@ -4,6 +4,7 @@
 
 #include "testing.h"
 #include "random.h"
+#include "array.h"
 
 /*
  * Coding Style:
@@ -20,10 +21,8 @@ int main()
 
         // check testing file
         testing();
-        run_tests();
-
-        // body
-        float a[10];
+        run_random_test();
+        run_array_tests();
 
         return 0;
 }

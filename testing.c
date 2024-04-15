@@ -27,10 +27,15 @@ void print_random_float(float max)
 }
 
 
-void run_tests()
+void run_random_test()
 {
         for (int i = 0; i < 10; i++) {
                 print_random_float(100.0);
         }
         printf("\n");
+}
+
+void run_array_tests()
+{
+
 }
