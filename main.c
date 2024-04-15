@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdbool.h>
 #include <math.h>
 
 #include "testing.h"
@@ -19,8 +18,11 @@ int main()
         // initialize random generation
         seed();
 
-        // check testing file
+        // check files are included
         testing();
+        array_header();
+
+        // run tests
         run_random_test();
         run_array_tests();
 
