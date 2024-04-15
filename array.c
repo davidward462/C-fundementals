@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 #include "array.h"
 
@@ -15,6 +16,11 @@ void print_array(float array[], int len)
                 printf("%f ", array[i]);
         }
         printf("]\n");
+}
+
+bool array_are_equal(float a[], float b[], int len)
+{
+        return false;
 }
 
 void fill_array(float a[], int len, float value)
