@@ -37,7 +37,7 @@ void run_random_test()
         printf("\n");
 }
 
-bool test_fill_array(float input[], float expected[], int len, float value)
+bool test_fill_array(float inut[], float expected[], int len, float value)
 {
         fill_array(input, len, value);
 
