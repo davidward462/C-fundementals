@@ -55,22 +55,30 @@ bool test_array_are_equal(float a[], float b[], int len, bool expected)
                 return true;
         }
         else {
-                printf("Test failed.\n");
+                printf("Test failed: array_are_equal()\n");
                 return false;
         }
 }
 
 void run_array_tests()
 {
+        printf("Begin array tests...\n");
+
         float x[] = {1.0, 1.0, 1.0};
         float y[] = {1.0, 1.0, 1.0};
         test_array_are_equal(x, y, 3, true);
 
+        float a[] = {3.55, 0.0, 24.5};
+        float b[] = {9.9904, 9.0, 1.0};
+        test_array_are_equal(a, b, 3, false);
 
-        float a[3];
+
+        float array[3];
         int len = 3;
         float expected[] = {0.0, 0.0, 0.0};
-        test_fill_array(a, expected, len, 0.0);
+        test_fill_array(array, expected, len, 0.0);
+
+        printf("End array tests...\n");
 }
 
 

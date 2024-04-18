@@ -21,7 +21,15 @@ void print_array(float array[], int len)
 // TODO: add body for this
 bool array_are_equal(float a[], float b[], int len)
 {
-        return false;
+        bool result = true;
+
+        for (int i = 0; i < len; i++) {
+                if (a[i] != b[i]) {
+                        result = false;
+                }
+        }
+
+        return result;
 }
 
 void fill_array(float a[], int len, float value)
