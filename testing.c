@@ -64,14 +64,21 @@ void run_array_tests()
 {
         printf("Begin array tests...\n");
 
-        float x[] = {1.0, 1.0, 1.0};
-        float y[] = {1.0, 1.0, 1.0};
-        test_array_are_equal(x, y, 3, true);
-
         float a[] = {3.55, 0.0, 24.5};
         float b[] = {9.9904, 9.0, 1.0};
         test_array_are_equal(a, b, 3, false);
 
+        float c[] = {0.222};
+        float d[] = {0.222};
+        test_array_are_equal(c, d, 1, true);
+
+        float e[] = {5345.22003};
+        float f[] = {0.222};
+        test_array_are_equal(e, f, 1, false);
+
+        float x[] = {1.0, 1.0, 1.0};
+        float y[] = {1.0, 1.0, 1.0};
+        test_array_are_equal(x, y, 3, true);
 
         float array[3];
         int len = 3;
