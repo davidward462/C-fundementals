@@ -18,7 +18,6 @@ void print_array(float array[], int len)
         printf("]\n");
 }
 
-// TODO: add body for this
 bool array_are_equal(float a[], float b[], int len)
 {
         bool result = true;
