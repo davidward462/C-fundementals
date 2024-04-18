@@ -25,18 +25,9 @@ int rand_interval(int min, int max)
         return value;
 }
 
-float random_float(float a)
+float random_float_range(float min, float max)
 {
-        float x = (float)( (double)rand() / (double)(RAND_MAX/a) );
-        return x;
+        float scale = (float)( (double)rand() / (double)(RAND_MAX) );
+        float result = min + scale * (max - min);
+        return result;
 }
-
-/**
- * TODO: Add this later
- *
- *float float_rand( float min, float max )
-{
-    float scale = rand() / (float) RAND_MAX;  //[0, 1.0]
-    return min + scale * ( max - min );       //[min, max]
-}
-**/

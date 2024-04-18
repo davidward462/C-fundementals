@@ -7,6 +7,8 @@ void testing();
 
 void test_rand_interval(int count, int min, int max);
 
+void print_random_float(float min, float max);
+
 void run_random_test();
 
 void run_array_tests();

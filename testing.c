@@ -22,17 +22,17 @@ void test_rand_interval(int count, int min, int max)
         }
 }
 
-void print_random_float(float max)
+void print_random_float(float min, float max)
 {
-        float f = random_float(max);
+        float f = random_float_range(min, max);
         printf("%f ", f);
 }
 
 
 void run_random_test()
 {
-        for (int i = 0; i < 10; i++) {
-                print_random_float(100.0);
+        for (int i = 0; i < 20; i++) {
+                print_random_float(-100.0, 100.0);
         }
         printf("\n");
 }

@@ -5,6 +5,6 @@ void seed();
 
 int rand_interval(int min, int max);
 
-float random_float(float a);
+float random_float_range(float min, float max);
 
 #endif
