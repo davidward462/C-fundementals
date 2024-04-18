@@ -92,6 +92,10 @@ void run_array_tests()
         float h[] = {1.0};
         test_fill_array(g, h, len, 1.0);
 
+        float i[] = {4.5, 4.5, 4.5};
+        // use existing list a
+        test_fill_array(a, i, 3, 4.5);
+
         printf("End array tests...\n");
 }
 
