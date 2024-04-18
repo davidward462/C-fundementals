@@ -37,14 +37,16 @@ void run_random_test()
         printf("\n");
 }
 
-bool test_fill_array(float input[], float expected[], int len, float value)
+bool test_fill_array(float inut[], float expected[], int len, float value)
 {
-        fill_array(input, len, 0.0);
+        fill_array(input, len, value);
 
-        print_array(input, len);
-        print_array(expected, len);
+        bool result = array_are_equal(input, expected, len);
+        if (result == false) {
+                printf("Test failed: fill_array()\n");
+        }
 
-        return true;
+        return result;
 }
 
 bool test_array_are_equal(float a[], float b[], int len, bool expected)
@@ -84,6 +86,15 @@ void run_array_tests()
         int len = 3;
         float expected[] = {0.0, 0.0, 0.0};
         test_fill_array(array, expected, len, 0.0);
+
+        float g[1];
+        len = 1;
+        float h[] = {1.0};
+        test_fill_array(g, h, len, 1.0);
+
+        float i[] = {4.5, 4.5, 4.5};
+        // use existing list a
+        test_fill_array(a, i, 3, 4.5);
 
         printf("End array tests...\n");
 }
