@@ -99,7 +99,7 @@ void run_array_tests()
         test_fill_array(g, h, len, 1.0);
 
         float i[] = {4.5, 4.5, 4.5};
-        // use existing list a
+        // use existing list 'a'
         test_fill_array(a, i, 3, 4.5);
 
         float A[1];
@@ -110,10 +110,3 @@ void run_array_tests()
 
         printf("End array tests...\n");
 }
-
-
-
-
-
-
-
