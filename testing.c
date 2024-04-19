@@ -49,6 +49,12 @@ bool test_fill_array(float input[], float expected[], int len, float value)
         return result;
 }
 
+bool test_random_fill_array(float a[], int len, float min, float max)
+{
+        random_fill_array(a, len, min, max);
+        print_array(a, len);
+}
+
 bool test_array_are_equal(float a[], float b[], int len, bool expected)
 {
         bool result = array_are_equal(a, b, len);
@@ -95,6 +101,12 @@ void run_array_tests()
         float i[] = {4.5, 4.5, 4.5};
         // use existing list a
         test_fill_array(a, i, 3, 4.5);
+
+        float A[1];
+        test_random_fill_array(A, 1, -10.0, 10.0);
+
+        float B[10];
+        test_random_fill_array(A, 10, 100.0, 200.0);
 
         printf("End array tests...\n");
 }

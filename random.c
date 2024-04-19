@@ -31,3 +31,17 @@ float random_float_range(float min, float max)
         float result = min + scale * (max - min);
         return result;
 }
+
+void random_fill_array(float a[], int len, float min, float max)
+{
+        for (int i = 0; i < len; i++) {
+                a[i] = random_float_range(min, max);
+        }
+}
+
+
+
+
+
+
+

@@ -13,6 +13,10 @@ void run_random_test();
 
 void run_array_tests();
 
+bool test_array_are_equal(float a[], float b[], int len, bool expected);
+
+bool test_random_fill_array(float a[], int len, float min, float max);
+
 bool test_fill_array(float input[], float expected[], int len, float value);
 
 #endif
