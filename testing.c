@@ -28,6 +28,13 @@ void print_random_float(float min, float max)
         printf("%f ", f);
 }
 
+bool test_array_max(float a[], int len, float expected_max)
+{
+        float actual_max = array_max(a, len);
+        if (expected_max != actual_max) {
+                printf("Test failed: array_max()\n");
+        }
+}
 
 void run_random_test()
 {
@@ -75,6 +82,8 @@ void run_array_tests()
         float a[] = {3.55, 0.0, 24.5};
         float b[] = {9.9904, 9.0, 1.0};
         test_array_are_equal(a, b, 3, false);
+        test_array_max(a, 3, 24.5);
+        test_array_max(b, 3, 9.9904);
 
         float c[] = {0.222};
         float d[] = {0.222};

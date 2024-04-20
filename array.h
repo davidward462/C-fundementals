@@ -11,4 +11,6 @@ bool array_are_equal(float a[], float b[], int len);
 
 void fill_array(float a[], int length, float value);
 
+float array_max(float a[], int len);
+
 #endif

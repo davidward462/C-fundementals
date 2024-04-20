@@ -37,3 +37,15 @@ void fill_array(float a[], int len, float value)
                 a[i] = value;
         }
 }
+
+float array_max(float a[], int len)
+{
+        float max = a[0];
+        for (int i = 0; i < len; i++) {
+                if (a[i] > max) {
+                        max = a[i];
+                }
+        }
+        return max;
+}
+

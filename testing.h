@@ -19,4 +19,6 @@ bool test_random_fill_array(float a[], int len, float min, float max);
 
 bool test_fill_array(float input[], float expected[], int len, float value);
 
+bool test_array_max(float a[], int len, float expected_max);
+
 #endif
