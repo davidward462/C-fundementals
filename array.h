@@ -13,4 +13,6 @@ void fill_array(float a[], int length, float value);
 
 float array_max(float a[], int len);
 
+void random_fill_array(float a[], int len, float min, float max);
+
 #endif

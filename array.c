@@ -2,6 +2,7 @@
 #include <stdbool.h>
 
 #include "array.h"
+#include "random.h"
 
 void array_header()
 {
@@ -49,3 +50,9 @@ float array_max(float a[], int len)
         return max;
 }
 
+void random_fill_array(float a[], int len, float min, float max)
+{
+        for (int i = 0; i < len; i++) {
+                a[i] = random_float_range(min, max);
+        }
+}
