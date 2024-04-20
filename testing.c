@@ -77,7 +77,7 @@ bool test_array_are_equal(float a[], float b[], int len, bool expected)
 
 void run_array_tests()
 {
-        printf("Begin array tests...\n");
+        printf("\nBegin array tests...\n");
 
         float a[] = {3.55, 0.0, 24.5};
         float b[] = {9.9904, 9.0, 1.0};
