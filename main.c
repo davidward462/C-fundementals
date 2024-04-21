@@ -13,7 +13,26 @@
  * Block curly brace goes on the same line, except for function.
  */
 
-int main()
+void print_args(int argc, char** argv)
+{
+        printf("argc = %d\n", argc);
+
+        // Loop through all the arguments passed and print them in an array format.
+        printf("argv = [");
+        for(int i = 0; i < argc; i++)
+        {
+                printf("'%s'", argv[i]);
+
+                // Only print command and space on non-last entries.
+                if (i < argc - 1)
+                {
+                    printf(", ");
+                }
+        }
+        printf("]\n");
+}
+
+int main(int argc, char** argv)
 {
         // initialize random generation
         seed();
@@ -25,6 +44,7 @@ int main()
         // run tests
         // run_array_tests();
 
+        print_args(argc, argv);
 
         return 0;
 }
