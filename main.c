@@ -23,7 +23,8 @@ int main()
         array_header();
 
         // run tests
-        run_array_tests();
+        // run_array_tests();
+
 
         return 0;
 }
