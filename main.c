@@ -42,9 +42,9 @@ int main(int argc, char** argv)
         array_header();
 
         // run tests
-        // run_array_tests();
+        run_array_tests();
 
-        print_args(argc, argv);
+        // print_args(argc, argv);
 
         return 0;
 }

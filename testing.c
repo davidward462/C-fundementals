@@ -114,8 +114,8 @@ void run_array_tests()
         float A[1];
         test_random_fill_array(A, 1, -10.0, 10.0);
 
-        float B[10];
-        test_random_fill_array(A, 10, 100.0, 200.0);
+        float B[5];
+        test_random_fill_array(A, 5, 100.0, 200.0);
 
         printf("End array tests...\n");
 }
