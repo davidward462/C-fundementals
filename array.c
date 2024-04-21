@@ -11,11 +11,12 @@ void array_header()
 
 void print_array(float array[], int len)
 {
-        printf("[ ");
-        for (int i = 0; i < len; i++)
+        printf("[");
+        for (int i = 0; i < len-1; i++)
         {
-                printf("%f ", array[i]);
+                printf("%f, ", array[i]);
         }
+        printf("%f", array[len-1]);
         printf("]\n");
 }
 
