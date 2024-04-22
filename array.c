@@ -57,3 +57,22 @@ void random_fill_array(float a[], int len, float min, float max)
                 a[i] = random_float_range(min, max);
         }
 }
+
+bool array_is_ordered(float a[], int len)
+{
+        if (len <= 1) {
+                // array of 1 element is already sorted.
+                return true;
+        }
+        else {
+                float current;
+                float next;
+                for (int i = 1; i < len; i++) {
+                        current = a[i];
+                        next = a[i+1];
+                        if (next < current) {
+                                return false;
+                        }
+                }
+        }
+}
