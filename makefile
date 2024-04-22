@@ -16,4 +16,4 @@ array.o: array.c array.h
 	gcc -c array.c
 
 clean:
-	rm main.o testing.o random.o array.o
+	rm main.o testing.o random.o array.o main
