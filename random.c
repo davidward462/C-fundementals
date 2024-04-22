@@ -31,10 +31,3 @@ float random_float_range(float min, float max)
         return result;
 }
 
-
-
-
-
-
-
-
