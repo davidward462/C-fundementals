@@ -8,7 +8,6 @@
 void seed()
 {
         srand(time(NULL));
-        printf("Random generation seeded.\n");
 }
 
 // Output a random integer x in the range min <= x <= max.

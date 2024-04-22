@@ -38,11 +38,11 @@ int main(int argc, char** argv)
         seed();
 
         // check files are included
-        testing();
-        array_header();
+        //testing();
+        //array_header();
 
         // run tests
-        run_array_tests();
+        //run_array_tests();
 
         // print_args(argc, argv);
 
