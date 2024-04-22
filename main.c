@@ -38,7 +38,7 @@ int main(int argc, char** argv)
         seed();
 
         // run tests
-        //run_array_tests();
+        run_array_tests();
 
         return 0;
 }

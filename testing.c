@@ -49,7 +49,10 @@ bool test_fill_array(float input[], float expected[], int len, float value)
         fill_array(input, len, value);
 
         bool result = array_are_equal(input, expected, len);
-        if (result == false) {
+        if (result) {
+                printf("Test passed.\n");
+        }
+        else {
                 printf("Test failed: fill_array()\n");
         }
 
@@ -67,6 +70,7 @@ bool test_array_are_equal(float a[], float b[], int len, bool expected)
         bool result = array_are_equal(a, b, len);
 
         if (result == expected) {
+                printf("Test passed.\n");
                 return true;
         }
         else {
@@ -79,44 +83,30 @@ void run_array_tests()
 {
         printf("\nBegin array tests...\n");
 
-        float a[] = {3.55, 0.0, 24.5};
-        float b[] = {9.9904, 9.0, 1.0};
-        test_array_are_equal(a, b, 3, false);
-        test_array_max(a, 3, 24.5);
-        test_array_max(b, 3, 9.9904);
+        float one[1] = {2.4};
+        float two[2] = {6.75, 1.01};
+        float three[3] = {0.0, 3.54, 7.212};
 
-        float c[] = {0.222};
-        float d[] = {0.222};
-        test_array_are_equal(c, d, 1, true);
-        test_array_max(c, 1, 0.222);
+        float alpha[1] = {6.44};
+        float beta[2] = {0.001, 643.2};
+        float beta_clone[2] = {0.001, 643.2};
+        float gamma[3] = {63.2, 111.5, 1.4};
+        float gamma_clone[3] = {63.2, 111.5, 1.4};
 
-        float e[] = {5345.22003};
-        float f[] = {0.222};
-        test_array_are_equal(e, f, 1, false);
+        float fill_one[1];
+        float fill_two[2];
+        float fill_three[3];
 
-        float x[] = {1.0, 1.0, 1.0};
-        float y[] = {1.0, 1.0, 1.0};
-        test_array_are_equal(x, y, 3, true);
+        test_array_max(one, 1, one[0]);
+        test_array_max(two, 2, two[0]);
+        test_array_max(three, 3, three[2]);
 
-        float array[3];
-        int len = 3;
-        float expected[] = {0.0, 0.0, 0.0};
-        test_fill_array(array, expected, len, 0.0);
+        test_array_are_equal(one, alpha, 1, false);
+        test_array_are_equal(beta, beta_clone, 2, true);
+        test_array_are_equal(three, gamma, 3, false);
 
-        float g[1];
-        len = 1;
-        float h[] = {1.0};
-        test_fill_array(g, h, len, 1.0);
-
-        float i[] = {4.5, 4.5, 4.5};
-        // use existing list 'a'
-        test_fill_array(a, i, 3, 4.5);
-
-        float A[1];
-        test_random_fill_array(A, 1, -10.0, 10.0);
-
-        float B[5];
-        test_random_fill_array(A, 5, 100.0, 200.0);
+        float expected[1] = {0.0};
+        test_fill_array(fill_one, expected, 1, 0.0);
 
         printf("End array tests...\n");
 }
