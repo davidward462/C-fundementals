@@ -88,6 +88,7 @@ void run_array_tests()
         float c[] = {0.222};
         float d[] = {0.222};
         test_array_are_equal(c, d, 1, true);
+        test_array_max(c, 1, 0.222);
 
         float e[] = {5345.22003};
         float f[] = {0.222};
