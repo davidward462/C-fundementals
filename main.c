@@ -37,14 +37,8 @@ int main(int argc, char** argv)
         // initialize random generation
         seed();
 
-        // check files are included
-        //testing();
-        //array_header();
-
         // run tests
         //run_array_tests();
-
-        // print_args(argc, argv);
 
         return 0;
 }
