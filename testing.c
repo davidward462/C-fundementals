@@ -79,6 +79,21 @@ bool test_array_are_equal(float a[], float b[], int len, bool expected)
         }
 }
 
+bool test_array_is_sorted(float a[], int len, bool expected)
+{
+        if (expected) {
+                printf("Sorted: ");
+        }
+        else {
+                printf("Not sorted: ");
+        }
+
+        int x = 0;
+
+        print_array(a, len);
+        return false;
+}
+
 void run_array_tests()
 {
         printf("\nBegin array tests...\n");
@@ -107,6 +122,11 @@ void run_array_tests()
 
         float expected[1] = {0.0};
         test_fill_array(fill_one, expected, 1, 0.0);
+
+        test_array_is_sorted(one, 1, true);
+        test_array_is_sorted(two, 2, false);
+        test_array_is_sorted(three, 3, true);
+        test_array_is_sorted(gamma, 3, false);
 
         printf("End array tests...\n");
 }

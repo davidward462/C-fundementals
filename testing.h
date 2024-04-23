@@ -21,4 +21,6 @@ bool test_fill_array(float input[], float expected[], int len, float value);
 
 bool test_array_max(float a[], int len, float expected_max);
 
+bool test_array_is_sorted(float a[], int len, bool expected);
+
 #endif

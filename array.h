@@ -15,6 +15,6 @@ float array_max(float a[], int len);
 
 void random_fill_array(float a[], int len, float min, float max);
 
-bool array_is_ordered(float a[], int len);
+bool array_is_sorted(float a[], int len);
 
 #endif

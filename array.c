@@ -16,7 +16,7 @@ void print_array(float array[], int len)
         {
                 printf("%f, ", array[i]);
         }
-        printf("%f", array[len-1]);
+        printf("%g", array[len-1]);
         printf("]\n");
 }
 
@@ -58,7 +58,7 @@ void random_fill_array(float a[], int len, float min, float max)
         }
 }
 
-bool array_is_ordered(float a[], int len)
+bool array_is_sorted(float a[], int len)
 {
         if (len <= 1) {
                 // array of 1 element is already sorted.
