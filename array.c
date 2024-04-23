@@ -67,7 +67,7 @@ bool array_is_sorted(float a[], int len)
         else {
                 float current;
                 float next;
-                for (int i = 1; i < len; i++) {
+                for (int i = 0; i < len-1; i++) {
                         current = a[i];
                         next = a[i+1];
                         if (next < current) {
