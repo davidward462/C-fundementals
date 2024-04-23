@@ -60,21 +60,17 @@ void random_fill_array(float a[], int len, float min, float max)
 
 bool array_is_sorted(float a[], int len)
 {
-        if (len <= 1) {
-                // array of 1 element is already sorted.
-                return true;
-        }
-        else {
-                float current;
-                float next;
-                for (int i = 0; i < len-1; i++) {
-                        current = a[i];
-                        next = a[i+1];
-                        if (next < current) {
-                                return false;
-                        }
+
+        float current;
+        float next;
+        for (int i = 0; i < len-1; i++) {
+                current = a[i];
+                next = a[i+1];
+                if (next < current) {
+                        return false;
                 }
         }
+        return true;
 }
 
 // TODO: finish this

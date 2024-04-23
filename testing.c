@@ -12,15 +12,23 @@ void testing()
         printf("Testing files included.\n");
 }
 
+// Print the value of a boolean to the display
 void print_bool(bool b)
 {
-        if (b) {
-                printf("true\n");
-        }
-        else {
-                printf("false\n");
-        }
+        b ? printf("true\n") : printf("false\n");
 }
+
+// Return true if expected and actual truth values match.
+bool assert(bool expected, bool actual)
+{
+        bool result = false;
+        if (expected == actual)
+        {
+                result = true;
+        }
+        return result;
+}
+
 
 void test_rand_interval(int count, int min, int max)
 {
@@ -42,7 +50,7 @@ bool test_array_max(float a[], int len, float expected_max)
 {
         float actual_max = array_max(a, len);
         if (expected_max != actual_max) {
-                printf("Test failed: array_max()\n");
+                printf("Failed: array_max()\n");
         }
 }
 
@@ -60,10 +68,10 @@ bool test_fill_array(float input[], float expected[], int len, float value)
 
         bool result = array_are_equal(input, expected, len);
         if (result) {
-                printf("Test passed.\n");
+                printf("Passed.\n");
         }
         else {
-                printf("Test failed: fill_array()\n");
+                printf("Failed: fill_array()\n");
         }
 
         return result;
@@ -77,26 +85,28 @@ bool test_random_fill_array(float a[], int len, float min, float max)
 
 bool test_array_are_equal(float a[], float b[], int len, bool expected)
 {
-        bool result = array_are_equal(a, b, len);
+        bool actual = array_are_equal(a, b, len);
 
-        if (result == expected) {
-                printf("Test passed.\n");
+        if (expected == actual) {
+                printf("Passed.\n");
                 return true;
         }
         else {
-                printf("Test failed: array_are_equal()\n");
+                printf("Failed: array_are_equal()\n");
                 return false;
         }
 }
 
 bool test_array_is_sorted(float a[], int len, bool expected)
 {
-        printf("\n");
         bool actual = array_is_sorted(a, len);
-        print_array(a, len);
-        print_bool(actual);
 
-        return false;
+        if (actual == expected) {
+                printf("Passed.\n");
+        }
+        else {
+                printf("Failed.\n");
+        }
 }
 
 void run_array_tests()
