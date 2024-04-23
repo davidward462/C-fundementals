@@ -76,3 +76,8 @@ bool array_is_sorted(float a[], int len)
                 }
         }
 }
+
+void sort_array(float a[], int len)
+{
+
+}
