@@ -12,6 +12,16 @@ void testing()
         printf("Testing files included.\n");
 }
 
+void print_bool(bool b)
+{
+        if (b) {
+                printf("true\n");
+        }
+        else {
+                printf("false\n");
+        }
+}
+
 void test_rand_interval(int count, int min, int max)
 {
         printf("Displaying %d calls of rand_interval(%d, %d)\n", count, min, max);
@@ -81,16 +91,11 @@ bool test_array_are_equal(float a[], float b[], int len, bool expected)
 
 bool test_array_is_sorted(float a[], int len, bool expected)
 {
-        if (expected) {
-                printf("Sorted: ");
-        }
-        else {
-                printf("Not sorted: ");
-        }
-
-        int x = 0;
-
+        printf("\n");
+        bool actual = array_is_sorted(a, len);
         print_array(a, len);
+        print_bool(actual);
+
         return false;
 }
 
@@ -124,9 +129,11 @@ void run_array_tests()
         test_fill_array(fill_one, expected, 1, 0.0);
 
         test_array_is_sorted(one, 1, true);
-        test_array_is_sorted(two, 2, false);
         test_array_is_sorted(three, 3, true);
+        test_array_is_sorted(beta, 2, true);
+
         test_array_is_sorted(gamma, 3, false);
+        test_array_is_sorted(two, 2, false);
 
         printf("End array tests...\n");
 }
