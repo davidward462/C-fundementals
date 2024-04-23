@@ -77,7 +77,14 @@ bool array_is_sorted(float a[], int len)
         }
 }
 
+// TODO: finish this
 void sort_array(float a[], int len)
 {
-
+        if (len > 1) {
+                float *a;
+                float *b;
+                for (int i = 0; i < len-1; i++) {
+                        printf("%f ", a[i]);
+                }
+        }
 }
