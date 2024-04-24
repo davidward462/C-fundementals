@@ -52,7 +52,7 @@ void print_random_float(float min, float max)
 }
 
 
-bool test_array_max(float a[], int len, float expected_max)
+void test_array_max(float a[], int len, float expected_max)
 {
         float actual_max = array_max(a, len);
         bool match = (expected_max == actual_max);
@@ -67,43 +67,42 @@ void run_random_test()
         printf("\n");
 }
 
-bool test_fill_array(float input[], float expected[], int len, float value)
+void test_fill_array(float input[], float expected[], int len, float value)
 {
         fill_array(input, len, value);
 
         bool are_equal = array_are_equal(input, expected, len);
         test_result(are_equal);
-        return are_equal;
 }
 
-bool test_random_fill_array(float a[], int len, float min, float max)
+void test_random_fill_array(float a[], int len, float min, float max)
 {
         random_fill_array(a, len, min, max);
         print_array(a, len);
 }
 
-bool test_array_are_equal(float a[], float b[], int len, bool expected)
+void test_array_are_equal(float a[], float b[], int len, bool expected)
 {
         bool actual = array_are_equal(a, b, len);
         bool match = assert(expected, actual);
         test_result(match);
 }
 
-bool test_array_is_sorted(float a[], int len, bool expected)
+void test_array_is_sorted(float a[], int len, bool expected)
 {
         bool actual = array_is_sorted(a, len);
         bool match = assert(expected, actual);
         test_result(match);
 }
 
-bool test_bubblesort(float a[], int len)
+void test_bubblesort(float a[], int len)
 {
         bubblesort(a, len);
         bool is_sorted = array_is_sorted(a, len);
         test_result(is_sorted);
 }
 
-bool test_swap(float a[], float expected[])
+void test_swap(float a[], float expected[])
 {
         swap(&a[0], &a[1]);
         bool result = array_are_equal(a, expected, 2);
