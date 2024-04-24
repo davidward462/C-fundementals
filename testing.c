@@ -103,16 +103,35 @@ bool test_array_is_sorted(float a[], int len, bool expected)
 
         if (actual == expected) {
                 printf("Passed.\n");
+                return true;
         }
         else {
                 printf("Failed.\n");
+                return false;
         }
 }
+
+bool test_sort_array(float a[], int len)
+{
+        sort_array(a, len);
+        bool is_sorted = array_is_sorted(a, len);
+        if (is_sorted) {
+                printf("Passed.\n");
+                return true;
+        }
+        else {
+                printf("Failed.\n");
+                print_array(a, len);
+                return false;
+        }
+}
+
 
 void run_array_tests()
 {
         printf("\nBegin array tests...\n");
 
+        // testing arrays
         float one[1] = {2.4};
         float two[2] = {6.75, 1.01};
         float three[3] = {0.0, 3.54, 7.212};
@@ -127,13 +146,27 @@ void run_array_tests()
         float fill_two[2];
         float fill_three[3];
 
+        // random arrays
+        float min = -10.0;
+        float max = 10.0;
+        float r_A[1];
+        float r_B[2];
+        float r_C[3];
+        float r_D[10];
+        random_fill_array(r_A, 1, min, max);
+        random_fill_array(r_B, 2, min, max);
+        random_fill_array(r_C, 3, min, max);
+        random_fill_array(r_D, 10, min, max);
+
         test_array_max(one, 1, one[0]);
         test_array_max(two, 2, two[0]);
         test_array_max(three, 3, three[2]);
+        printf("\n");
 
         test_array_are_equal(one, alpha, 1, false);
         test_array_are_equal(beta, beta_clone, 2, true);
         test_array_are_equal(three, gamma, 3, false);
+        printf("\n");
 
         float expected[1] = {0.0};
         test_fill_array(fill_one, expected, 1, 0.0);
@@ -141,9 +174,16 @@ void run_array_tests()
         test_array_is_sorted(one, 1, true);
         test_array_is_sorted(three, 3, true);
         test_array_is_sorted(beta, 2, true);
-
         test_array_is_sorted(gamma, 3, false);
         test_array_is_sorted(two, 2, false);
+        printf("\n");
+
+
+        test_sort_array(r_A, 1);
+        test_sort_array(r_B, 2);
+        test_sort_array(r_C, 3);
+        test_sort_array(r_D, 10);
+        printf("\n");
 
         printf("End array tests...\n");
 }
