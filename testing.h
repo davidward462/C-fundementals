@@ -3,7 +3,9 @@
 
 #include <stdbool.h>
 
-void testing();
+void print_bool(bool b);
+
+void test_result(bool b);
 
 void test_rand_interval(int count, int min, int max);
 
