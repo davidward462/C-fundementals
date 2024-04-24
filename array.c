@@ -85,6 +85,14 @@ void swap(float *a, float *b)
         *b = temp;
 }
 
+/**
+ * BUBBLESORT
+ *
+ * best: O(n)
+ * avg: O(n^2)
+ * worst: O(n^2)
+ * space: O(1)
+ */
 void bubblesort(float a[], int len)
 {
         int i;
