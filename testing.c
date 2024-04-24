@@ -126,6 +126,19 @@ bool test_bubblesort(float a[], int len)
         }
 }
 
+bool test_swap(float a[], float expected[])
+{
+        swap(&a[0], &a[1]);
+        bool result = array_are_equal(a, expected, 2);
+        if (result) {
+                printf("Passed.\n");
+                return true;
+        }
+        else {
+                printf("Failed.\n");
+                return false;
+        }
+}
 
 void run_array_tests()
 {
@@ -158,6 +171,10 @@ void run_array_tests()
         random_fill_array(r_C, 3, min, max);
         random_fill_array(r_D, 10, min, max);
 
+        // for swapping
+        float swap_start[2] = {0.0, 1.0};
+        float swap_end[2] = {1.0, 0.0};
+
         test_array_max(one, 1, one[0]);
         test_array_max(two, 2, two[0]);
         test_array_max(three, 3, three[2]);
@@ -178,12 +195,13 @@ void run_array_tests()
         test_array_is_sorted(two, 2, false);
         printf("\n");
 
-
         test_bubblesort(r_A, 1);
         test_bubblesort(r_B, 2);
         test_bubblesort(r_C, 3);
         test_bubblesort(r_D, 10);
         printf("\n");
+
+        test_swap(swap_start, swap_end);
 
         printf("End array tests...\n");
 }

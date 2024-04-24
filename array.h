@@ -17,7 +17,7 @@ void random_fill_array(float a[], int len, float min, float max);
 
 bool array_is_sorted(float a[], int len);
 
-void swap(float *a, float *b)
+void swap(float *a, float *b);
 
 void bubblesort(float a[], int len);
 

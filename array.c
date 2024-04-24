@@ -75,10 +75,14 @@ bool array_is_sorted(float a[], int len)
 
 void swap(float *a, float *b)
 {
-        // store value of a in temp.
-        float *temp = a;
-        a = b;
-        b = temp;
+        // store value at a in temp.
+        float temp = *a;
+
+        // set value at a as value at.
+        *a = *b;
+
+        // set value at b as value in temp.
+        *b = temp;
 }
 
 void bubblesort(float a[], int len)
@@ -96,9 +100,7 @@ void bubblesort(float a[], int len)
                         // if current is larger than next
                         if (a[j] > a[j+1]) {
                                 // swap
-                                float temp = a[j];
-                                a[j] = a[j+1];
-                                a[j+1] = temp;
+                                swap(&a[j], &a[j+1]);
                                 swapped = true;
                         }
                 }
