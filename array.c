@@ -73,6 +73,14 @@ bool array_is_sorted(float a[], int len)
         return true;
 }
 
+void swap(float *a, float *b)
+{
+        // store value of a in temp.
+        float *temp = a;
+        a = b;
+        b = temp;
+}
+
 void bubblesort(float a[], int len)
 {
         int i;
