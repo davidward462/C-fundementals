@@ -76,11 +76,37 @@ bool array_is_sorted(float a[], int len)
 // TODO: finish this
 void sort_array(float a[], int len)
 {
-        if (len > 1) {
-                float *a;
-                float *b;
-                for (int i = 0; i < len-1; i++) {
-                        printf("%f ", a[i]);
+        int i;
+        int j;
+        bool swapped;
+
+        // loop up to second last element of array
+        for (int i = 0; i < len-1; i++) {
+
+                swapped = false;
+                for (int j = 0; j < len - i - 1; j++) {
+
+                        // if current is larger than next
+                        if (a[j] > a[j+1]) {
+                                // swap
+                                float temp = a[j];
+                                a[j] = a[j+1];
+                                a[j+1] = temp;
+                                swapped = true;
+                        }
+                }
+
+                // end if no swap has happened
+                if (!swapped) {
+                        break;
                 }
         }
 }
+
+
+
+
+
+
+
+
