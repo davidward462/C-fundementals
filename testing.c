@@ -111,9 +111,9 @@ bool test_array_is_sorted(float a[], int len, bool expected)
         }
 }
 
-bool test_sort_array(float a[], int len)
+bool test_bubblesort(float a[], int len)
 {
-        sort_array(a, len);
+        bubblesort(a, len);
         bool is_sorted = array_is_sorted(a, len);
         if (is_sorted) {
                 printf("Passed.\n");
@@ -179,10 +179,10 @@ void run_array_tests()
         printf("\n");
 
 
-        test_sort_array(r_A, 1);
-        test_sort_array(r_B, 2);
-        test_sort_array(r_C, 3);
-        test_sort_array(r_D, 10);
+        test_bubblesort(r_A, 1);
+        test_bubblesort(r_B, 2);
+        test_bubblesort(r_C, 3);
+        test_bubblesort(r_D, 10);
         printf("\n");
 
         printf("End array tests...\n");

@@ -73,8 +73,7 @@ bool array_is_sorted(float a[], int len)
         return true;
 }
 
-// TODO: finish this
-void sort_array(float a[], int len)
+void bubblesort(float a[], int len)
 {
         int i;
         int j;
