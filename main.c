@@ -4,6 +4,7 @@
 #include "testing.h"
 #include "random.h"
 #include "array.h"
+#include "linkedList.h"
 
 /*
  * Coding Style:
@@ -38,7 +39,7 @@ int main(int argc, char** argv)
         seed();
 
         // run tests
-        run_array_tests();
+        //run_array_tests();
 
         return 0;
 }

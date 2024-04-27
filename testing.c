@@ -6,6 +6,7 @@
 // Include all files that need to be tested.
 #include "random.h"
 #include "array.h"
+#include "linkedList.h"
 
 // Print the value of a boolean to the display
 void print_bool(bool b)
